@@ -1,0 +1,57 @@
+$containerPadding: 15;
+
+$container: 1420 + ($containerPadding * 2);
+$containerMin: 695 + ($containerPadding * 2);
+$containerLarge: 1628 + ($containerPadding * 2);
+
+:root {
+    --title-font: 'Gilroy';
+    --main-font: 'Gilroy';
+    
+    --accent: #F05D35;
+    --accent-light: #e9623c;
+    --accent-dark: #d45532;
+
+    --dark: #0B070C;
+    --dark-2: #160F10;
+
+    --white: #FFF;
+    --black: #000;
+    --gray: #B3B2B4;
+    --gray-2: #989799;
+
+    --container-padding: 15px;
+}
+
+@font-face {
+    @include font-include('Gilroy', 300, swap, normal, 'Gilroy-Light');
+}
+
+@font-face {
+    @include font-include('Gilroy', 400, swap, normal, 'Gilroy-Regular');
+}
+
+@font-face {
+    @include font-include('Gilroy', 500, swap, normal, 'Gilroy-Medium');
+}
+
+@font-face {
+    @include font-include('Gilroy', 600, swap, normal, 'Gilroy-SemiBold');
+}
+
+@font-face {
+    @include font-include('Gilroy', 700, swap, normal, 'Gilroy-Bold');
+}
+
+
+@font-face {
+    @include font-include('Rubik', 300, swap, normal, 'Rubik-Light');
+}
+
+@font-face {
+    @include font-include('Rubik', 400, swap, normal, 'Rubik-Regular');
+}
+
+@font-face {
+    @include font-include('Rubik', 500, swap, normal, 'Rubik-Medium');
+}

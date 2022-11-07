@@ -1,0 +1,206 @@
+.servers {
+
+    // .servers__bg
+
+    &__bg {
+
+        // .servers__bg--img
+
+        &--img {
+        }
+    }
+
+    // .servers__container
+
+    &__container {
+    }
+
+    // .servers__title
+
+    &__title {
+    }
+
+    // .servers__slider
+
+    &__slider {
+
+        padding-top: 34px; padding-bottom: 25px; margin-bottom: -25px;
+
+        padding-right: 50px;
+
+        margin: -10px;
+
+        @include _768 {
+            margin: -15px;
+        }
+
+        @include _992 {
+            padding-right: 0;
+        }       
+
+        text-align: left;
+
+        &.swiper-grid-column > .swiper-wrapper {
+            flex-direction: row;
+        }
+
+        // .servers__slider--slide
+
+        &--slide {
+            //padding: 15px;
+        }
+
+        // .servers__slider--list
+
+        &--list {
+            
+        }
+
+        // .servers__slider--dev-process
+
+        &--dev-process {
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 133%;
+
+            text-align: center;
+
+            background: linear-gradient(90.5deg, rgba(255, 255, 255, 0.44) 12.25%, rgba(255, 255, 255, 0) 116%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        // .servers__slider--nav
+
+        &--nav {
+            display: flex;
+            justify-content: center;
+            padding-left: 50px;
+            padding-top: 10px;
+            @include _992 {
+                display: none;
+            }
+        }
+
+        // .servers__slider--arrow
+
+        &--arrow {
+            position: static;
+            transform: translate(0,0);
+            margin: 0 10px;
+        }
+    }
+
+    // .servers__slide
+
+    &__slide {
+
+        height: auto;
+
+        padding: 10px;
+
+        @include _768 {
+            padding: 15px;
+        }
+
+        &._dev-process &--body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        // .servers__slide--body
+
+        &--body {
+            padding: 14px;
+            background: rgba(19, 19, 19, 0.33);
+            backdrop-filter: blur(7.5px);
+            border-radius: 8px;
+
+            min-height: 100%;
+
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                border: 2px solid transparent;
+                border-radius: 8px;
+                background: linear-gradient(119.17deg, #F05D35 -25.6%, rgba(240, 93, 53, 0) 41.2%)/ border-box;
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) padding-box, 
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                z-index: -1;
+            }
+        }
+
+        // .servers__slide--title
+
+        &--title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 133%;
+
+            margin-bottom: -7px;
+        }
+
+        // .servers__slide--progress
+
+        &--progress {
+            
+            width: 100%; height: 7px;
+
+            margin-bottom: -5px;
+
+            &::-webkit-progress-value {
+                background: linear-gradient(91.62deg, #F05D35 48.63%, #F0BC35 105.29%);
+                border-radius: 15px;
+
+            }
+
+            &::-webkit-progress-bar {
+                background: rgba(255, 255, 255, 0.26);
+                border-radius: 15px;
+            }
+        }
+
+        // .servers__slide--value
+
+        &--value {
+            //margin-bottom: -3px;
+            text-align: right;
+            width: 100%;
+            display: inline-block;
+            line-height: 100%;
+        }
+
+        // .servers__slide--tabs
+
+        &--tabs {
+            padding-top: 7px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -4px;
+
+            & li {
+                margin: 4px;
+
+                font-weight: 500;
+                font-size: 0.8125rem;
+                line-height: 100%;
+                text-transform: uppercase;
+
+                padding: 8px 10px;
+                border-radius: 4px;
+            }
+        }
+    }
+}

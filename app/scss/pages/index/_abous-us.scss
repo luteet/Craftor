@@ -1,0 +1,34 @@
+.about-us {
+
+    // .about-us__container
+
+    &__container {
+    }
+
+    // .about-us__title
+
+    &__title {
+    }
+
+    // .about-us__text
+
+    &__text {
+        padding-top: 16px;
+        
+        font-size: 0.8125rem;
+        text-align: left;
+        @include _768 {
+            font-size: 1rem;
+            padding-top: 23px;
+            text-align: center;
+        }
+        
+        @include _992 {
+            font-size: 1.125rem;
+        }
+        line-height: 156%;
+
+        color: rgba(255, 255, 255, 0.84);
+
+    }
+}

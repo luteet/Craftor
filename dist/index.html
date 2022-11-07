@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo">
+                <img src="img/logo.svg" alt="Логотип сайта" width="161" height="24" class="header__logo--img">
+            </a>
+            <nav class="header__nav">
+                <div class="header__nav--body">
+                    <ul class="header__nav--list">
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link" aria-label="Форум">
+                                <span>
+                                    Форум
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link" aria-label="Донат">
+                                <span>
+                                    Донат
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link _current" aria-label="Информация">
+                                <span>
+                                    Информация
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link" aria-label="Сотрудничество">
+                                <span>
+                                    Сотрудничество
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link" aria-label="Правила">
+                                <span>
+                                    Правила
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header__nav--social">
+                        <ul class="header__nav--social-list">
+                            <li class="header__nav--social-item">
+                                <a href="#" class="header__nav--social-link" title="Discord">
+                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.8945 1.39333C13.7248 0.513321 12.3211 0.0733387 10.8395 0L10.6055 0.220016C11.9312 0.513321 13.1009 1.09998 14.1927 1.90666C12.867 1.24666 11.3853 0.806675 9.82568 0.659998C9.35781 0.586659 8.96787 0.586659 8.5 0.586659C8.03213 0.586659 7.64219 0.586659 7.17432 0.659998C5.61468 0.806675 4.13302 1.24666 2.80734 1.90666C3.89906 1.09998 5.06882 0.513321 6.3945 0.220016L6.16053 0C4.67888 0.0733387 3.27521 0.513321 2.1055 1.39333C0.779816 3.74002 0.0779822 6.38001 0 9.09329C1.16971 10.2667 2.80734 11 4.52296 11C4.52296 11 5.06882 10.4133 5.4587 9.89997C4.44497 9.68 3.50917 9.16663 2.88532 8.36001C3.43118 8.65331 3.97704 8.94667 4.52296 9.16663C5.22479 9.45999 5.92663 9.60667 6.62846 9.75334C7.25231 9.82663 7.87615 9.89997 8.5 9.89997C9.12385 9.89997 9.74769 9.82663 10.3715 9.75334C11.0734 9.60667 11.7752 9.45999 12.477 9.16663C13.023 8.94667 13.5688 8.65331 14.1147 8.36001C13.4908 9.16663 12.555 9.68 11.5413 9.89997C11.9312 10.4133 12.477 11 12.477 11C14.1927 11 15.8303 10.2667 17 9.09329C16.922 6.38001 16.2202 3.74002 14.8945 1.39333ZM5.92663 7.7733C5.1468 7.7733 4.44497 7.1133 4.44497 6.30667C4.44497 5.5 5.1468 4.84 5.92663 4.84C6.70645 4.84 7.40828 5.5 7.40828 6.30667C7.40828 7.1133 6.70645 7.7733 5.92663 7.7733ZM11.0734 7.7733C10.2936 7.7733 9.59172 7.1133 9.59172 6.30667C9.59172 5.5 10.2936 4.84 11.0734 4.84C11.8532 4.84 12.555 5.5 12.555 6.30667C12.555 7.1133 11.8532 7.7733 11.0734 7.7733Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__nav--social-item">
+                                <a href="#" class="header__nav--social-link" title="VKontakte">
+                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.71455 10C3.24797 10 0.129919 6.24625 0 0H2.73829C2.82823 4.58458 4.84697 6.52653 6.44597 6.92693V0H9.02436V3.95395C10.6034 3.78378 12.2623 1.98198 12.822 0H15.4004C15.1895 1.02791 14.7691 2.00118 14.1655 2.85893C13.562 3.71668 12.7882 4.44045 11.8926 4.98498C12.8923 5.48254 13.7753 6.18678 14.4833 7.05125C15.1913 7.91571 15.7082 8.92073 16 10H13.1618C12.8999 9.06258 12.3676 8.22343 11.6316 7.58773C10.8956 6.95203 9.9886 6.54805 9.02436 6.42643V10H8.71455Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__nav--social-item">
+                                <a href="#" class="header__nav--social-link" title="YouTube">
+                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64545 10.675C1.36016 10.5899 1.09987 10.4385 0.886514 10.2336C0.673163 10.0286 0.51302 9.77621 0.419598 9.49757C-0.114239 8.0574 -0.272414 2.04375 0.755718 0.856587C1.0979 0.470396 1.58101 0.232627 2.1002 0.19489C4.85836 -0.0970349 13.38 -0.0581113 14.3587 0.292199C14.634 0.380103 14.8855 0.528188 15.0943 0.725356C15.3032 0.922524 15.464 1.16366 15.5648 1.43071C16.148 2.91952 16.1678 8.32987 15.4857 9.7603C15.3047 10.1326 15.0018 10.4343 14.6256 10.6166C13.5975 11.1226 3.0097 11.1129 1.64545 10.675V10.675ZM6.02489 7.85306L10.9678 5.32304L6.02489 2.77356V7.85306Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="header__account">
+                <a href="#" class="header__account--btn" title="Войти">
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.6569 11.3431C13.7855 10.4718 12.7484 9.82678 11.6168 9.43631C12.8288 8.60159 13.625 7.20463 13.625 5.625C13.625 3.07478 11.5502 1 9 1C6.44978 1 4.375 3.07478 4.375 5.625C4.375 7.20463 5.17122 8.60159 6.38319 9.43631C5.25162 9.82678 4.2145 10.4718 3.34316 11.3431C1.83216 12.8542 1 14.8631 1 17H2.25C2.25 13.278 5.27803 10.25 9 10.25C12.722 10.25 15.75 13.278 15.75 17H17C17 14.8631 16.1678 12.8542 14.6569 11.3431ZM9 9C7.13903 9 5.625 7.486 5.625 5.625C5.625 3.764 7.13903 2.25 9 2.25C10.861 2.25 12.375 3.764 12.375 5.625C12.375 7.486 10.861 9 9 9Z" fill="#F05D35" stroke="#F05D35" stroke-width="0.5"/>
+                    </svg>
+                    Войти
+                </a>
+            </div>
+            <button class="header__burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="intro__bg bg-section">
+                <picture>
+                    <source srcset="img/index/intro/bg.webp" media="(min-width: 400px)" type="image/webp">
+                    <source srcset="img/index/intro/bg-mob.webp" type="image/webp">
+                    <img src="img/index/intro/bg.png" loading="lazy" alt="" width="0" height="0" class="intro__bg--img bg-section__img">
+                </picture>
+            </div>
+            <div class="intro__container container">
+                <div class="intro__info">
+                    <h1 class="intro__info--title" aria-label="Craftor">
+                        <img src="img/logo.svg" width="850" height="135" alt="Craftor" class="intro__logo">
+                    </h1>
+                    <div class="intro__info--text">
+                        Это качество и комфорт для каждого игрока. <br>
+                        Лучшие сервера, классный контент и все для Вас.
+                        Общения и мира!
+                    </div>
+                    <div class="intro__info--arrow">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 12L12.5 23C16.2421 19.3333 23.781 12 24 12" stroke="#F05D35" stroke-opacity="0.26" stroke-width="2"/>
+                            <path d="M5 1L12.5 8C14.9405 5.66667 19.8571 1 20 1" stroke="#F05D35" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="intro__info--btn btn">
+                        Начать играть
+                    </a>
+                </div>
+                <div class="intro__social">
+                    <ul class="intro__social--list">
+                        <li class="intro__social--item">
+                            <a href="#" class="intro__social--link" title="VKontakte">
+                                <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2894 12.2131C3.93783 12.2131 0.315013 7.89323 0.164062 0.704926H3.34564C3.45014 5.98096 5.79569 8.21578 7.65354 8.67657V0.704926H10.6493V5.25521C12.484 5.05938 14.4115 2.98583 15.0617 0.704926H18.0575C17.8125 1.88787 17.3241 3.00792 16.6228 3.99504C15.9215 4.98215 15.0224 5.81509 13.9819 6.44174C15.1434 7.01434 16.1693 7.8248 16.992 8.81964C17.8146 9.81448 18.4152 10.9711 18.7542 12.2131H15.4565C15.1522 11.1343 14.5337 10.1686 13.6786 9.43704C12.8234 8.70546 11.7697 8.24055 10.6493 8.10058V12.2131H10.2894V12.2131Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="intro__social--item">
+                            <a href="#" class="intro__social--link" title="Discord">
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.1126 2.04263C15.7726 0.980314 14.1645 0.449188 12.4671 0.360657L12.1991 0.62625C13.7178 0.980314 15.0579 1.6885 16.3086 2.66228C14.7899 1.86556 13.0925 1.33444 11.3057 1.15738C10.7697 1.06884 10.323 1.06884 9.78702 1.06884C9.25102 1.06884 8.80431 1.06884 8.2683 1.15738C6.48156 1.33444 4.78415 1.86556 3.26544 2.66228C4.51612 1.6885 5.85621 0.980314 7.37493 0.62625L7.1069 0.360657C5.4095 0.449188 3.80144 0.980314 2.46141 2.04263C0.942684 4.87544 0.138654 8.06231 0.0493164 11.3377C1.38935 12.7541 3.26544 13.6393 5.23087 13.6393C5.23087 13.6393 5.85621 12.9312 6.30287 12.3114C5.14153 12.0459 4.06947 11.4262 3.35478 10.4525C3.98012 10.8065 4.60547 11.1607 5.23087 11.4262C6.0349 11.7803 6.83893 11.9574 7.64296 12.1344C8.35765 12.2229 9.07234 12.3114 9.78702 12.3114C10.5017 12.3114 11.2164 12.2229 11.9311 12.1344C12.7351 11.9574 13.5391 11.7803 14.3432 11.4262C14.9686 11.1607 15.5939 10.8065 16.2193 10.4525C15.5046 11.4262 14.4325 12.0459 13.2712 12.3114C13.7178 12.9312 14.3432 13.6393 14.3432 13.6393C16.3086 13.6393 18.1847 12.7541 19.5247 11.3377C19.4354 8.06231 18.6314 4.87544 17.1126 2.04263ZM6.83893 9.74422C5.94556 9.74422 5.14153 8.9475 5.14153 7.97378C5.14153 7 5.94556 6.20328 6.83893 6.20328C7.73231 6.20328 8.53633 7 8.53633 7.97378C8.53633 8.9475 7.73231 9.74422 6.83893 9.74422ZM12.7351 9.74422C11.8417 9.74422 11.0377 8.9475 11.0377 7.97378C11.0377 7 11.8417 6.20328 12.7351 6.20328C13.6285 6.20328 14.4325 7 14.4325 7.97378C14.4325 8.9475 13.6285 9.74422 12.7351 9.74422Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="intro__social--item">
+                            <a href="#" class="intro__social--link" title="YouTube">
+                                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.96114 12.9289C1.62967 12.833 1.32723 12.6624 1.07934 12.4315C0.831455 12.2006 0.645387 11.9162 0.536841 11.6023C-0.0834165 9.9797 -0.267197 3.20426 0.927374 1.86671C1.32495 1.4316 1.88627 1.16371 2.4895 1.12119C5.69417 0.792284 15.5953 0.836139 16.7325 1.23082C17.0523 1.32986 17.3445 1.49671 17.5872 1.71885C17.8299 1.941 18.0167 2.21268 18.1338 2.51355C18.8115 4.19097 18.8344 10.2867 18.0419 11.8983C17.8317 12.3178 17.4797 12.6576 17.0426 12.8631C15.848 13.4332 3.54624 13.4222 1.96114 12.9289ZM7.04955 9.74947L12.7927 6.89896L7.04955 4.02652V9.74947Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="about-us section-padding decor-circle">
+            <div class="about-us__container container txt-center">
+                <h2 class="about-us__title section-title">
+                    О крафторе
+                </h2>
+                <div class="about-us__text">
+                    Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от нас анализа соответствующий условий активизации. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
+                </div>
+            </div>
+        </section>
+        <section class="servers section-padding">
+            <div class="servers__bg bg-section">
+                <picture>
+                    <source srcset="img/index/servers/bg.webp" type="image/webp">
+                    <img src="img/index/servers/bg.jpg" alt="" width="0" height="0" loading="lazy" class="servers__bg--img bg-section__img">
+                </picture>
+            </div>
+            <div class="servers__container container txt-center">
+                <h2 class="servers__title section-title">
+                    Наши сервера
+                </h2>
+                <div class="servers__slider swiper">
+                    <ul class="servers__slider--list swiper-wrapper">
+                        <li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li><li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li><li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li><li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li><li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li><li class="servers__slider--slide servers__slide swiper-slide">
+    <div class="servers__slide--body">
+        <h3 class="servers__slide--title">
+            BloodMagic
+        </h3>
+        <progress class="servers__slide--progress" min="0" value="70" max="100"></progress>
+        <small class="servers__slide--value">6/80</small>
+        <ul class="servers__slide--tabs">
+            <li style="background: rgba(155, 50, 50, 0.45);">
+                HARD
+            </li>
+            <li style="background: rgba(241, 174, 54, 0.45);">
+                ВАЙП
+            </li>
+        </ul>
+    </div>
+</li>
+                        <li class="servers__slider--slide servers__slide swiper-slide _dev-process">
+                            <div class="servers__slide--body _dev-process">
+                                <div class="servers__slider--dev-process">
+                                    В разработке..
+                                </div>
+                            </div>
+                        </li>
+                        <li class="servers__slider--slide servers__slide swiper-slide _dev-process">
+                            <div class="servers__slide--body _dev-process">
+                                <div class="servers__slider--dev-process">
+                                    В разработке..
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="servers__slider--nav">
+                        <button type="button" class="servers__slider--arrow slider-arrow swiper-button-prev"></button>
+                        <button type="button" class="servers__slider--arrow slider-arrow swiper-button-next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news section-padding">
+            <div class="news__container container _large">
+                <h2 class="news__title section-title">
+                    Наши новости
+                </h2>
+                <div class="news__wrapper">
+                    <div class="news__inner">
+                        <div class="news__slider swiper">
+                            <ul class="news__slider--list swiper-wrapper">
+                                <li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-1.webp" type="image/webp">
+                <img src="img/index/news/image-1.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li><li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-2.webp" type="image/webp">
+                <img src="img/index/news/image-2.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li><li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-3.webp" type="image/webp">
+                <img src="img/index/news/image-3.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li><li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-1.webp" type="image/webp">
+                <img src="img/index/news/image-1.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li><li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-2.webp" type="image/webp">
+                <img src="img/index/news/image-2.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li><li class="news__slider--slide news__slide swiper-slide">
+    <a href="#" class="news__slide--body">
+        <div class="news__slide--image">
+            <picture>
+                <source srcset="img/index/news/image-3.webp" type="image/webp">
+                <img src="img/index/news/image-3.jpg" alt="" loading="lazy" width="500" height="250" class="news__slide--img">
+            </picture>
+        </div>
+        <div class="news__slide--info">
+            <h3 class="news__slide--title">
+                Обновление Крафтор
+            </h3>
+            <div class="news__slide--text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+            </div>
+            <span class="news__slide--link">
+                Читать далее
+            </span>
+        </div>
+    </a>
+</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="news__slider-nav">
+                        <div class="news__arrow slider-arrow swiper-button-prev" id="news-slider-arrow-prev"></div>
+                        <div class="news__arrow slider-arrow swiper-button-next" id="news-slider-arrow-next"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="available section-padding">
+            <div class="available__bg bg-section">
+                <picture>
+                    <source srcset="img/index/available/bg.webp" type="image/webp">
+                    <img src="img/index/available/bg.jpg" alt="" width="0" height="0" loading="lazy" class="available__bg--img bg-section__img _left">
+                </picture>
+            </div>
+            <div class="available__container container">
+                <h2 class="available__title section-title">
+                    ДОСТУПНЫ
+                </h2>
+                <ul class="available__list">
+                    <li class="available__item">
+                        <div class="available__item--body">
+                            <h3 class="available__item--title">
+                                Кастомные RPG
+                            </h3>
+                            <div class="available__item--text">
+                                1000+ ПРЕДМЕТОВ В КАЖДОМ <br> МОДПАКЕ
+                            </div>
+                        </div>
+                    </li>
+                    <li class="available__item">
+                        <div class="available__item--body">
+                            <h3 class="available__item--title">
+                                Косметика
+                            </h3>
+                            <div class="available__item--text">
+                                30+ ВИДОВ КИТОВ
+                            </div>
+                        </div>
+                    </li>
+                    <li class="available__item">
+                        <div class="available__item--body">
+                            <h3 class="available__item--title">
+                                Гибкая система рейдов
+                            </h3>
+                            <div class="available__item--text">
+                                СКОРОСТЬ ПОЛЕТА И ДРУГОЕ ДОСТУПНО <br> ОТДЕЛЬНО
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="our-project section-padding">
+            <div class="our-project__container container">
+                <h2 class="our-project__title section-title">
+                    ЗА НАШ ПРОЕКТ
+                </h2>
+                <ul class="our-project__list">
+                    <li class="our-project__card">
+                        <div class="our-project__card--body">
+                            <picture>
+                                <source srcset="img/index/our-project/card-1.webp" type="image/webp">
+                                <img src="img/index/our-project/card-1.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
+                            </picture>
+                            <h3 class="our-project__card--title">
+                                Craftor
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="our-project__card">
+                        <div class="our-project__card--body">
+                            <picture>
+                                <source srcset="img/index/our-project/card-2.webp" type="image/webp">
+                                <img src="img/index/our-project/card-2.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
+                            </picture>
+                            <h3 class="our-project__card--title">
+                                Minecrafting
+                            </h3>
+                        </div>
+                    </li>
+                    <li class="our-project__card">
+                        <div class="our-project__card--body">
+                            <picture>
+                                <source srcset="img/index/our-project/card-3.webp" type="image/webp">
+                                <img src="img/index/our-project/card-3.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
+                            </picture>
+                            <h3 class="our-project__card--title">
+                                MCRATE
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <a href="#" class="footer__logo">
+                <img src="img/logo.svg" width="150" loading="lazy" alt="" class="footer__logo--img">
+            </a>
+            <nav class="footer__nav">
+                <div class="footer__nav--block">
+                    <h3 class="footer__nav--title">
+                        Сайт
+                    </h3>
+                    <ul class="footer__nav--list">
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Форум
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Донат
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Информация
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Правила
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__nav--block">
+                    <h3 class="footer__nav--title">
+                        Полезная информация
+                    </h3>
+                    <ul class="footer__nav--list">
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Правила игры
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Конфиденциальность
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Обработка данных
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Польз. соглашение
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Платежи
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Реквизиты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__nav--block">
+                    <h3 class="footer__nav--title">
+                        Поддержка
+                    </h3>
+                    <ul class="footer__nav--list">
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Обратная связь
+                            </a>
+                        </li>
+                    </ul>
+                    <form action="#" class="footer__nav--question footer__question">
+                        <div class="footer__question--body">
+                            <h3 class="footer__nav--title">
+                                Задать вопрос
+                            </h3>
+                            <div class="footer__question--inner">
+                                <label class="footer__question--label">
+                                    <input type="email" name="email" placeholder="Email" required class="footer__question--input">
+                                </label>
+                                <button class="footer__question--submit" type="submit" title="Отправить">
+                                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 4.5H9.5M9.5 4.5L6 1M9.5 4.5L6 8" stroke="white" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="footer__nav--social footer__social">
+                        <ul class="footer__social--list">
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="Discord">
+                                    <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.2752 1.9C17.7615 0.699983 15.945 0.100007 14.0275 0L13.7248 0.300022C15.4404 0.699983 16.9542 1.49997 18.367 2.59998C16.6514 1.69999 14.7339 1.10001 12.7156 0.899997C12.1101 0.79999 11.6055 0.79999 11 0.79999C10.3945 0.79999 9.88989 0.79999 9.28441 0.899997C7.26605 1.10001 5.34861 1.69999 3.63302 2.59998C5.04584 1.49997 6.55964 0.699983 8.27523 0.300022L7.97246 0C6.05502 0.100007 4.23851 0.699983 2.72477 1.9C1.00917 5.10003 0.100918 8.70002 0 12.3999C1.51374 14 3.63302 15 5.85324 15C5.85324 15 6.55964 14.2 7.0642 13.5C5.75231 13.2 4.54128 12.5 3.73395 11.4C4.44036 11.8 5.14676 12.2 5.85324 12.5C6.76149 12.9 7.66975 13.1 8.57801 13.3C9.38534 13.4 10.1927 13.5 11 13.5C11.8073 13.5 12.6147 13.4 13.422 13.3C14.3302 13.1 15.2385 12.9 16.1468 12.5C16.8532 12.2 17.5596 11.8 18.2661 11.4C17.4587 12.5 16.2477 13.2 14.9358 13.5C15.4404 14.2 16.1468 15 16.1468 15C18.367 15 20.4863 14 22 12.3999C21.8991 8.70002 20.9908 5.10003 19.2752 1.9ZM7.66975 10.6C6.66057 10.6 5.75231 9.69995 5.75231 8.60001C5.75231 7.5 6.66057 6.6 7.66975 6.6C8.67893 6.6 9.58719 7.5 9.58719 8.60001C9.58719 9.69995 8.67893 10.6 7.66975 10.6ZM14.3302 10.6C13.3211 10.6 12.4128 9.69995 12.4128 8.60001C12.4128 7.5 13.3211 6.6 14.3302 6.6C15.3394 6.6 16.2477 7.5 16.2477 8.60001C16.2477 9.69995 15.3394 10.6 14.3302 10.6Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="VKontakte">
+                                    <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.4379 13C4.26296 13 0.170518 8.12012 0 0H3.594C3.71205 5.95996 6.36165 8.48448 8.46034 9.005V0H11.8445V5.14014C13.9169 4.91892 16.0943 2.57658 16.8289 0H20.213C19.9362 1.33629 19.3845 2.60153 18.5923 3.71661C17.8001 4.83168 16.7845 5.77259 15.609 6.48048C16.9211 7.1273 18.08 8.04282 19.0093 9.16662C19.9386 10.2904 20.6171 11.597 21 13H17.2748C16.9311 11.7814 16.2324 10.6905 15.2664 9.86405C14.3004 9.03764 13.11 8.51247 11.8445 8.35435V13H11.4379Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="YouTube">
+                                    <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.15965 13.5864C1.78522 13.478 1.44357 13.2853 1.16355 13.0245C0.883526 12.7637 0.673339 12.4424 0.550722 12.0878C-0.149939 10.2549 -0.357543 2.60113 0.991879 1.0902C1.44099 0.598686 2.07508 0.296071 2.75651 0.248042C6.37659 -0.123499 17.5612 -0.0739598 18.8458 0.371889C19.2071 0.483768 19.5372 0.672239 19.8113 0.92318C20.0854 1.17412 20.2965 1.48103 20.4287 1.8209C21.1943 3.71576 21.2202 10.6016 20.3249 12.4222C20.0875 12.8961 19.6899 13.28 19.1961 13.5121C17.8467 14.1561 3.95023 14.1437 2.15965 13.5864ZM7.90767 9.9948L14.3953 6.77478L7.90767 3.52999V9.9948Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="footer__text">
+                Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. 
+                <br>
+                <img src="img/pay.png" alt="">
+            </div>
+            <div class="footer__copy">
+                ⓒ 2022 Craftor
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+</html>
