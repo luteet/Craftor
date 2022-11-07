@@ -76,18 +76,6 @@ a {
 
 }
 
-.bg-img {
-    position: absolute;
-    left: 0; top: 0;
-    
-    width: 100%; height: 100%;
-
-    user-select: none;
-    object-fit: cover;
-
-    z-index: -1;
-}
-
 .decor-circle {
     overflow: hidden;
     &::before {

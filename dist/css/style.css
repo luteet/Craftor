@@ -380,10 +380,6 @@ summary {
     width: var(--swiper-centered-offset-after)
 }
 
-.popup-wrapper,.servers__slide--body,.wrapper,body,html {
-    min-height: 100%
-}
-
 .swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child {
     -webkit-margin-before: var(--swiper-centered-offset-before);
     margin-block-start: var(--swiper-centered-offset-before)
@@ -943,7 +939,8 @@ button.swiper-pagination-bullet {
 }
 
 body,html {
-    font-size: 16px
+    font-size: 16px;
+    min-height: 100%
 }
 
 body {
@@ -966,6 +963,10 @@ a {
     top: 0
 }
 
+.wrapper {
+    min-height: 100%
+}
+
 .main {
     flex: 1 0 auto
 }
@@ -986,21 +987,6 @@ a {
 
 .section-padding {
     padding: 35px 0
-}
-
-.bg-img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -o-object-fit: cover;
-    object-fit: cover;
-    z-index: -1
 }
 
 .decor-circle::before {
@@ -1168,6 +1154,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100%;
     z-index: 2
 }
 
@@ -1607,6 +1594,7 @@ a {
     -webkit-backdrop-filter: blur(7.5px);
     backdrop-filter: blur(7.5px);
     border-radius: 8px;
+    min-height: 100%;
     position: relative
 }
 
