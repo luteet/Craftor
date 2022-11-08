@@ -20,6 +20,8 @@
     // .available__title
 
     &__title {
+        position: relative;
+        z-index: 2;
     }
 
     // .available__list

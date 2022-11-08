@@ -11,25 +11,58 @@
             </div>
             <div class="intro__container container">
                 <div class="intro__info">
-                    <h1 class="intro__info--title" aria-label="Craftor">
+                    <h1 class="intro__info--title" data-aos="fade-down" data-aos-anchor=".intro__info" aria-label="Craftor">
                         <img src="img/logo.svg" width="850" height="135" alt="Craftor" class="intro__logo">
                     </h1>
-                    <div class="intro__info--text">
+                    <div class="intro__info--text" data-aos="fade-down" data-aos-delay="200" data-aos-anchor=".intro__info">
                         Это качество и комфорт для каждого игрока. <br>
                         Лучшие сервера, классный контент и все для Вас.
                         Общения и мира!
                     </div>
-                    <div class="intro__info--arrow">
+                    <div class="intro__info--arrow" data-aos="fade-down" data-aos-delay="400">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 12L12.5 23C16.2421 19.3333 23.781 12 24 12" stroke="#F05D35" stroke-opacity="0.26" stroke-width="2"/>
-                            <path d="M5 1L12.5 8C14.9405 5.66667 19.8571 1 20 1" stroke="#F05D35" stroke-width="2"/>
+                            <!-- <path d="M1 12L12.5 23C16.2421 19.3333 23.781 12 24 12" stroke="#F05D35" stroke-opacity="0.26" stroke-width="2"/>
+                            <path d="M5 1L12.5 8C14.9405 5.66667 19.8571 1 20 1" stroke="#F05D35" stroke-width="2"/> -->
+                            <polyline id="polyline-anim-1" points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" stroke-width="2"/>
+                            <polyline id="polyline-anim-2" points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" opacity="0" stroke-width="2"/>
+                            <!-- <polyline points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" stroke-width="2"/> -->
+                            <animate href="#polyline-anim-1"
+                            attributeName="points"
+                            from="5,5 12.5,12.5 20,5"
+                            to="2,18 12.5,25 23,18"
+                            dur="3s"
+                            repeatCount="indefinite" />
+
+                            <animate href="#polyline-anim-1"
+                            attributeType="CSS" 
+                            attributeName="opacity" 
+                            values="0;1;0" 
+                            keyTimes="0; 0.5; 1" dur="3s" 
+                            repeatCount="indefinite" />
+
+                            <animate href="#polyline-anim-2"
+                            attributeName="points"
+                            from="5,5 12.5,12.5 20,5"
+                            to="2,18 12.5,25 23,18"
+                            dur="3s"
+                            begin="1.5s"
+                            repeatCount="indefinite" />
+
+                            <animate href="#polyline-anim-2"
+                            attributeType="CSS" 
+                            attributeName="opacity" 
+                            values="0;1;0" 
+                            begin="1.5s"
+                            keyTimes="0; 0.5; 1" dur="3s" 
+                            repeatCount="indefinite" />
+                                
                         </svg>
                     </div>
-                    <a href="#" class="intro__info--btn btn">
+                    <a href="#" class="intro__info--btn btn" data-aos="fade-down" data-aos-delay="500">
                         Начать играть
                     </a>
                 </div>
-                <div class="intro__social">
+                <div class="intro__social" data-aos="fade-in">
                     <ul class="intro__social--list">
                         <li class="intro__social--item">
                             <a href="#" class="intro__social--link" title="VKontakte">
@@ -58,26 +91,26 @@
         </section>
         <section class="about-us section-padding decor-circle">
             <div class="about-us__container container txt-center">
-                <h2 class="about-us__title section-title">
+                <h2 class="about-us__title section-title" data-aos="fade-down">
                     О крафторе
                 </h2>
-                <div class="about-us__text">
+                <div class="about-us__text" data-aos="fade-down" data-aos-delay="200">
                     Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Задача организации, в особенности же консультация с широким активом требуют определения и уточнения модели развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности требуют от нас анализа соответствующий условий активизации. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
                 </div>
             </div>
         </section>
         <section class="servers section-padding">
-            <div class="servers__bg bg-section">
+            <div class="servers__bg bg-section" data-aos="fade-in">
                 <picture>
                     <source srcset="img/index/servers/bg.webp" type="image/webp">
                     <img src="img/index/servers/bg.jpg" alt="" width="0" height="0" loading="lazy" class="servers__bg--img bg-section__img">
                 </picture>
             </div>
             <div class="servers__container container txt-center">
-                <h2 class="servers__title section-title">
+                <h2 class="servers__title section-title" data-aos="fade-down" data-aos-delay="200">
                     Наши сервера
                 </h2>
-                <div class="servers__slider swiper">
+                <div class="servers__slider swiper" data-aos="fade-down" data-aos-delay="400">
                     <ul class="servers__slider--list swiper-wrapper">
                         @@loop("html/index/_server-card.html", [
                             {},
@@ -111,12 +144,12 @@
         </section>
         <section class="news section-padding">
             <div class="news__container container _large">
-                <h2 class="news__title section-title">
+                <h2 class="news__title section-title" data-aos="fade-down">
                     Наши новости
                 </h2>
                 <div class="news__wrapper">
                     <div class="news__inner">
-                        <div class="news__slider swiper">
+                        <div class="news__slider swiper" data-aos="fade-down" data-aos-delay="200">
                             <ul class="news__slider--list swiper-wrapper">
                                 @@loop("html/index/_news-slide.html", [
                                     {
@@ -142,26 +175,26 @@
                         </div>
                     </div>
                     <div class="news__slider-nav">
-                        <div class="news__arrow slider-arrow swiper-button-prev" id="news-slider-arrow-prev"></div>
-                        <div class="news__arrow slider-arrow swiper-button-next" id="news-slider-arrow-next"></div>
+                        <div class="news__arrow slider-arrow swiper-button-prev" data-aos="fade-in" data-aos-delay="600" data-aos-anchor=".news__slider" id="news-slider-arrow-prev"></div>
+                        <div class="news__arrow slider-arrow swiper-button-next" data-aos="fade-in" data-aos-delay="200" data-aos-anchor=".news__slider" id="news-slider-arrow-next"></div>
                     </div>
                 </div>
                 
             </div>
         </section>
         <section class="available section-padding">
-            <div class="available__bg bg-section">
+            <div class="available__bg bg-section" data-aos="fade-in">
                 <picture>
                     <source srcset="img/index/available/bg.webp" type="image/webp">
                     <img src="img/index/available/bg.jpg" alt="" width="0" height="0" loading="lazy" class="available__bg--img bg-section__img _left">
                 </picture>
             </div>
             <div class="available__container container">
-                <h2 class="available__title section-title">
+                <h2 class="available__title section-title" data-aos="fade-down" data-aos-delay="200">
                     ДОСТУПНЫ
                 </h2>
                 <ul class="available__list">
-                    <li class="available__item">
+                    <li class="available__item" data-aos="fade-in" data-aos-delay="400">
                         <div class="available__item--body">
                             <h3 class="available__item--title">
                                 Кастомные RPG
@@ -171,7 +204,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="available__item">
+                    <li class="available__item" data-aos="fade-in" data-aos-delay="600">
                         <div class="available__item--body">
                             <h3 class="available__item--title">
                                 Косметика
@@ -181,7 +214,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="available__item">
+                    <li class="available__item" data-aos="fade-in" data-aos-delay="800">
                         <div class="available__item--body">
                             <h3 class="available__item--title">
                                 Гибкая система рейдов
@@ -196,12 +229,12 @@
         </section>
         <section class="our-project section-padding">
             <div class="our-project__container container">
-                <h2 class="our-project__title section-title">
+                <h2 class="our-project__title section-title" data-aos="fade-down">
                     ЗА НАШ ПРОЕКТ
                 </h2>
                 <ul class="our-project__list">
-                    <li class="our-project__card">
-                        <div class="our-project__card--body">
+                    <li class="our-project__card" data-aos="fade-down" data-aos-delay="200">
+                        <a href="#" class="our-project__card--body">
                             <picture>
                                 <source srcset="img/index/our-project/card-1.webp" type="image/webp">
                                 <img src="img/index/our-project/card-1.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
@@ -209,10 +242,10 @@
                             <h3 class="our-project__card--title">
                                 Craftor
                             </h3>
-                        </div>
+                        </a>
                     </li>
-                    <li class="our-project__card">
-                        <div class="our-project__card--body">
+                    <li class="our-project__card" data-aos="fade-down" data-aos-delay="400">
+                        <a href="#" class="our-project__card--body">
                             <picture>
                                 <source srcset="img/index/our-project/card-2.webp" type="image/webp">
                                 <img src="img/index/our-project/card-2.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
@@ -220,10 +253,10 @@
                             <h3 class="our-project__card--title">
                                 Minecrafting
                             </h3>
-                        </div>
+                        </a>
                     </li>
-                    <li class="our-project__card">
-                        <div class="our-project__card--body">
+                    <li class="our-project__card" data-aos="fade-down" data-aos-delay="600">
+                        <a href="#" class="our-project__card--body">
                             <picture>
                                 <source srcset="img/index/our-project/card-3.webp" type="image/webp">
                                 <img src="img/index/our-project/card-3.jpg" alt="" loading="lazy" width="453" height="80" class="our-project__card--img">
@@ -231,7 +264,7 @@
                             <h3 class="our-project__card--title">
                                 MCRATE
                             </h3>
-                        </div>
+                        </a>
                     </li>
                 </ul>
             </div>

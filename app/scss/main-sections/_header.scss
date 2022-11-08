@@ -1,3 +1,19 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes accentBorder {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: var(--accent);
+    }
+}
 .header {
     position: absolute;
     left: 0; top: 0;
@@ -197,7 +213,7 @@
                     opacity: 0;
                 }
 
-                &:hover, &._current {
+                &:hover {
                     &::before {
                         opacity: 1;
                     }
@@ -288,6 +304,21 @@
 
             background: rgba(255, 255, 255, 0.04);
             border-radius: 50%;
+        }
+    }
+
+    &.aos-animate &__nav--link {
+        @include _992 {
+            
+            &::before {
+                opacity: 0;
+            }
+            &._current {
+                animation: accentBorder 0.2s ease-in-out 0.8s 1 normal forwards;
+            }
+            &._current::before {
+                animation: fadeIn 0.2s ease-in-out 0.8s 1 normal forwards;
+            }
         }
     }
 
