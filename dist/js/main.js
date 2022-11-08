@@ -395,6 +395,7 @@ window.onresize = resize;
 
 AOS.init({
   duration: 700,
+  disable: "phone",
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=

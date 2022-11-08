@@ -108,13 +108,13 @@
 
             position: fixed;
             right: 0; top: 50%;
-            transform: translate(0,-50%);
+            
             z-index: 100;
 
             padding-right: 15px;
         }
 
-        @media (min-width: 1200px) {
+        @media (min-width: #{$container}px) {
             padding-right: 58px;
         }
 
@@ -123,6 +123,8 @@
         &--list {
             display: flex;
             flex-direction: column;
+
+            transform: translate(0,-50%);
         }
 
         // .intro__social--item

@@ -2,7 +2,7 @@ body,html {
     -webkit-text-size-adjust: 100%
 }
 
-button,hr,input {
+.swiper-cube,.swiper-flip,button,hr,input {
     overflow: visible
 }
 
@@ -512,10 +512,6 @@ summary {
     font-size: 0
 }
 
-.swiper-cube,.swiper-flip {
-    overflow: visible
-}
-
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
     -webkit-transform: scale(.33);
     transform: scale(.33);
@@ -607,6 +603,10 @@ button.swiper-pagination-bullet {
     transition: .2s transform,.2s top
 }
 
+.swiper-pagination-lock,.swiper-scrollbar-lock {
+    display: none
+}
+
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px)
 }
@@ -667,10 +667,6 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
-.swiper-pagination-lock {
-    display: none
-}
-
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
@@ -708,10 +704,6 @@ button.swiper-pagination-bullet {
     border-radius: 10px;
     left: 0;
     top: 0
-}
-
-.swiper-scrollbar-lock {
-    display: none
 }
 
 .swiper-zoom-container {
@@ -895,6 +887,12 @@ button.swiper-pagination-bullet {
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden
+}
+
+.bg-section,.decor-circle::before {
+    position: absolute;
+    top: 0;
+    z-index: -1
 }
 
 .swiper-creative .swiper-slide {
@@ -1964,16 +1962,13 @@ body {
 
 .decor-circle::before {
     content: "";
-    position: absolute;
     left: 50%;
-    top: 0;
     width: 1250px;
     height: 1250px;
     -webkit-transform: translate(-10%,-50%);
     transform: translate(-10%,-50%);
     border-radius: 50%;
     pointer-events: none;
-    z-index: -1;
     background: radial-gradient(circle,#d63f25 15%,rgba(0,0,0,0) 50%);
     opacity: .13
 }
@@ -2007,12 +2002,9 @@ body {
 }
 
 .bg-section {
-    position: absolute;
     left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1
+    height: 100%
 }
 
 .section-title,section {
@@ -2498,7 +2490,9 @@ body {
 
 .intro__social--list {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%)
 }
 
 .intro__social--item {
@@ -3351,8 +3345,6 @@ body {
         position: fixed;
         right: 0;
         top: 50%;
-        -webkit-transform: translate(0,-50%);
-        transform: translate(0,-50%);
         z-index: 100;
         padding-right: 15px
     }
@@ -3463,16 +3455,16 @@ body {
         padding: 16.2px 37px
     }
 
-    .intro__social {
-        padding-right: 58px
-    }
-
     .news__slide--info {
         padding: 24px 32px
     }
 }
 
 @media (min-width:1450px) {
+    .intro__social {
+        padding-right: 58px
+    }
+
     .news__arrow,.news__arrow.swiper-button-disabled {
         opacity: 1
     }
