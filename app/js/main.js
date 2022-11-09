@@ -331,51 +331,62 @@ function resizeCheckFunc(size, minWidth, maxWidth) {
   }
 }
 
-const slides = serversSlider.wrapperEl.querySelectorAll('.swiper-slide'),
-      devSlides = serversSlider.wrapperEl.querySelectorAll('.swiper-slide._dev-process');
+let slides, devSlides;
+
+if(serversSlider.wrapperEl) {
+  slides = serversSlider.wrapperEl.querySelectorAll('.swiper-slide'),
+  devSlides = serversSlider.wrapperEl.querySelectorAll('.swiper-slide._dev-process');
+}
+
 
 function resize() {
 
   windowSize = window.innerWidth
 
   html.style.setProperty('--height-screen', window.innerHeight + 'px');
+  html.style.setProperty('--height-header', header.offsetHeight + 'px');
 
   resizeCheckFunc(992,
     function () {  // screen > 992px
 
-      let slidesArray = [];
+      if(serversSlider.wrapperEl) {
+        let slidesArray = [];
             
-      slides.forEach(slide => {
-        if(!slide.classList.contains('_dev-process')) {
-          slidesArray.push(slide);
+        slides.forEach(slide => {
+          if(!slide.classList.contains('_dev-process')) {
+            slidesArray.push(slide);
+          }
+        })
+
+        function everyNth(arr, n) {
+          const result = [];
+          for (let i=n; i<arr.length; i+=n+1) result.push(arr[i]);
+          return result;
         }
-      })
 
-      function everyNth(arr, n) {
-        const result = [];
-        for (let i=n; i<arr.length; i+=n+1) result.push(arr[i]);
-        return result;
+        slidesArray = everyNth(slidesArray, 2)
+
+        for(let index = 0; index < slidesArray.length; index++) {
+          slidesArray[index].after(devSlides[index])
+        }
       }
-
-      slidesArray = everyNth(slidesArray, 2)
-
-      for(let index = 0; index < slidesArray.length; index++) {
-        slidesArray[index].after(devSlides[index])
-      }
+      
 
     },
     function () {  // screen < 992px
 
-      let slidesArray = [];
+      if(serversSlider.wrapperEl) {
+        let slidesArray = [];
             
-      slides.forEach(slide => {
-        if(!slide.classList.contains('_dev-process')) {
-          slidesArray.push(slide);
+        slides.forEach(slide => {
+          if(!slide.classList.contains('_dev-process')) {
+            slidesArray.push(slide);
+          }
+        })
+  
+        for(let index = 0; index < devSlides.length; index++) {
+          slidesArray[slidesArray.length-1].after(devSlides[index])
         }
-      })
-
-      for(let index = 0; index < devSlides.length; index++) {
-        slidesArray[slidesArray.length-1].after(devSlides[index])
       }
 
     }

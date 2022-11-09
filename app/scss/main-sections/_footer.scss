@@ -1,6 +1,9 @@
 .footer {
 
     margin-top: 30px;
+    &._none-margin {
+        margin-top: 0px;
+    }
 
     flex: 0 0 auto;
     border-top: 1px solid var(--accent);

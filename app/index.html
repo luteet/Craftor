@@ -21,11 +21,10 @@
                     </div>
                     <div class="intro__info--arrow" data-aos="fade-down" data-aos-delay="600">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- <path d="M1 12L12.5 23C16.2421 19.3333 23.781 12 24 12" stroke="#F05D35" stroke-opacity="0.26" stroke-width="2"/>
-                            <path d="M5 1L12.5 8C14.9405 5.66667 19.8571 1 20 1" stroke="#F05D35" stroke-width="2"/> -->
+                            
                             <polyline id="polyline-anim-1" points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" stroke-width="2"/>
                             <polyline id="polyline-anim-2" points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" opacity="0" stroke-width="2"/>
-                            <!-- <polyline points="5,5 12.5,12.5 20,5" fill="none" stroke="orangered" stroke-width="2"/> -->
+                            
                             <animate href="#polyline-anim-1"
                             attributeName="points"
                             from="5,5 12.5,12.5 20,5"
@@ -272,4 +271,6 @@
         </section>
     </main>
 
-@@include("html/_footer.html")
+@@include("html/_footer.html", {
+    "class": '',
+})
