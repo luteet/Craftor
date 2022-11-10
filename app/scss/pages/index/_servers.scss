@@ -155,6 +155,8 @@
         &--progress {
             
             width: 100%; height: 7px;
+            background: rgba(255, 255, 255, 0.26);
+            border-radius: 15px;
 
             margin-bottom: -5px;
 
@@ -166,6 +168,11 @@
 
             &::-webkit-progress-bar {
                 background: rgba(255, 255, 255, 0.26);
+                border-radius: 15px;
+            }
+
+            &::-moz-progress-bar {
+                background: linear-gradient(91.62deg, #F05D35 48.63%, #F0BC35 105.29%);
                 border-radius: 15px;
             }
         }

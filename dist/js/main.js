@@ -327,33 +327,47 @@ function resize() {
   resizeCheckFunc(992,
     function () {  // screen > 992px
 
-      if(serversSlider.wrapperEl) {
-        let slidesArray = [];
-            
-        slides.forEach(slide => {
-          if(!slide.classList.contains('_dev-process')) {
-            slidesArray.push(slide);
-          }
-        })
+      if(serversSlider) serversSlider.destroy(true, true)
 
-        function everyNth(arr, n) {
-          const result = [];
-          for (let i=n; i<arr.length; i+=n+1) result.push(arr[i]);
-          return result;
-        }
-
-        slidesArray = everyNth(slidesArray, 2)
-
-        for(let index = 0; index < slidesArray.length; index++) {
-          slidesArray[index].after(devSlides[index])
-        }
-      }
-      
+      serversSlider = new Swiper('.servers__slider', {
+  
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+        },
+    
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+      })
 
     },
     function () {  // screen < 992px
 
-      if(serversSlider.wrapperEl) {
+      if(serversSlider) serversSlider.destroy(true, true)
+
+      serversSlider = new Swiper('.servers__slider', {
+  
+        slidesPerView: 1,
+    
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          },
+          500: {
+            slidesPerView: 2,
+          },
+        }
+      })
+    });
+
+      /* if(serversSlider.wrapperEl) {
         let slidesArray = [];
             
         slides.forEach(slide => {
@@ -365,10 +379,10 @@ function resize() {
         for(let index = 0; index < devSlides.length; index++) {
           slidesArray[slidesArray.length-1].after(devSlides[index])
         }
-      }
+      } */
 
-    }
-  );
+    
+  
 
 }
 
