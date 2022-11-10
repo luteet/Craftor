@@ -33,11 +33,10 @@
     &-body {
         margin: auto;
         position: relative;
-        background: white;
+        background: var(--dark-2);
         
-        overflow-y: auto;
-        max-height: calc(100vh - 30px);
-        max-width: var(--container, 100%);
+        max-height: calc(var(--height-screen, 100vh) - 30px);
+        max-width: 585px;
         width: 100%;
 
         padding: 15px;
@@ -48,19 +47,92 @@
 
         z-index: 2;
     }
+    &-overflow {
+        overflow-y: auto;
+
+    }
     &-close-btn {
         position: absolute;
-        right: 15px; top: 10px;
-        line-height: 100%;
-        @include _426 {
-            right: 15px; top: 20px;
-        }
+        right: 23px; top: 23px;
         width: 40px; height: 40px;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
       
         & svg {
           width: 50%;
         }
 
-        background: white;
+        background: transparent;
     }
 }
+
+.our-ip {
+
+    // .our-ip__wrapper
+
+    &__wrapper {
+    }
+
+    // .our-ip__bg
+
+    &__bg {
+    }
+
+    // .our-ip__body
+
+    &__body {
+    }
+
+    // .our-ip__close-btn
+
+    &__close-btn {
+    }
+
+    // .our-ip__overflow
+
+    &__overflow {
+    }
+
+    // .our-ip__title
+
+    &__title {
+        padding-top: 30px;
+    }
+
+    // .our-ip__form
+
+    &__form {
+
+        padding-top: 30px; padding-bottom: 15px;
+
+        display: grid;
+        & > * {
+            grid-area: 1/1;
+        }
+
+        // .our-ip__form--label
+
+        &--label {
+        }
+
+        // .our-ip__form--input
+
+        &--input {
+            padding-right: 80px;
+        }
+
+        // .our-ip__form--copy
+
+        &--copy {
+            justify-self: end;
+
+            padding: 0 25px;
+
+            background: transparent;
+        }
+    }
+}
+

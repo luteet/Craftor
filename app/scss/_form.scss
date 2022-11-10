@@ -1,0 +1,17 @@
+.input {
+    width: 100%;
+    padding: 20px 25px;
+
+    font-size: 0.875rem;
+    line-height: 100%;
+
+    color: #8A8A8A;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    &::placeholder {
+        color: var(--gray-2);
+        opacity: 1;
+    }
+}

@@ -86,45 +86,32 @@ const body = document.querySelector('body'),
   window.FX = FX;
 })()
 
-class Popup {
+function Popup() {
+  
+  let body = document.querySelector('body'),
+      html = document.querySelector('html'),
+      duration = 200,
+      popupCheck = true,
+      popupCheckClose = true;
 
-  static body = document.querySelector('body');
-  static html = document.querySelector('html');
-  static idOnUrl = false;
-  static duration = 200;
-
-  static popupCheck = true;
-  static popupCheckClose = true;
-
-  static remHash() {
-    let uri = window.location.toString();
-    if (uri.indexOf("#") > 0) {
-        let clean_uri = uri.substring(0, uri.indexOf("#"));
-        window.history.replaceState({}, document.title, clean_uri);
-    }
-  }
-
-  static open(id) {
-    
-    if(Popup.popupCheck) {
-      Popup.popupCheck = false;
+  const open = function (id) {
+    if(popupCheck) {
+      popupCheck = false;
 
       let popup = document.querySelector(id);
 
       if(popup) {
 
-          Popup.body.classList.remove('_popup-active');
-          Popup.html.style.setProperty('--popup-padding', window.innerWidth - Popup.body.offsetWidth + 'px');
-          Popup.body.classList.add('_popup-active');
+          body.classList.remove('_popup-active');
+          html.style.setProperty('--popup-padding', window.innerWidth - body.offsetWidth + 'px');
+          body.classList.add('_popup-active');
 
           popup.classList.add('_active');
-          
-          if(Popup.idOnURL) history.pushState('', "", id);
 
           FX.fadeIn(popup, {
-              duration: Popup.duration,
+              duration: duration,
               complete: function () {
-                Popup.popupCheck = true;
+                popupCheck = true;
               }
           });
 
@@ -134,10 +121,9 @@ class Popup {
     }
   }
 
-  static close(popupClose) {
-    
-    if (Popup.popupCheckClose) {
-      Popup.popupCheckClose = false;
+  const close = function (popupClose) {
+    if (popupCheckClose) {
+      popupCheckClose = false;
 
       let popup
       if(typeof popupClose === 'string') {
@@ -147,64 +133,57 @@ class Popup {
       }
 
       FX.fadeOut(popup, {
-          duration: Popup.duration,
+          duration: duration,
           complete: function () {
               popup.style.display = 'none';
 
-              if(Popup.idOnURL) Popup.remHash();
-
-              Popup.body.classList.remove('_popup-active');
-              Popup.html.style.setProperty('--popup-padding', '0px');
+              body.classList.remove('_popup-active');
+              html.style.setProperty('--popup-padding', '0px');
               popup.classList.remove('_active');
 
-              Popup.popupCheckClose = true;
+              popupCheckClose = true;
           }
       });
       
-  }
+      }
   }
 
-  static start() {
-    let thisTarget
-    Popup.body.addEventListener('click', function(event) {
+  return {
+    
+    open: function (id) {
+      open(id);
+    },
 
+    close: function (popupClose) {
+      close(popupClose)
+    },
+
+    init: function() {
+      let thisTarget
+      body.addEventListener('click', function(event) {
+  
         thisTarget = event.target;
 
         let popupOpen = thisTarget.closest('.open-popup');
         if(popupOpen) {
             event.preventDefault();
-
-            Popup.open(popupOpen.getAttribute('href'))
+            open(popupOpen.getAttribute('href'))
         }
 
         let popupClose = thisTarget.closest('.popup-close');
         if(popupClose) {
-
-            Popup.close(popupClose)
-            
+            close(popupClose)
         }
-
-    });
-
-    if(Popup.idOnURL) {
-      let url = new URL(window.location);
-      if(url.hash) {
-        let timeoutDuration = Popup.duration;
-        Popup.duration = 0;
-        Popup.open(url.hash);
-        setTimeout(() => {
-          Popup.duration = timeoutDuration;
-        }, timeoutDuration)
-      }
-    }
-  };
-
-  constructor () {
-    Popup.start()
+  
+      });
+    },
+    
   }
 }
 
-new Popup();
+const popup = new Popup();
+
+popup.init()
 
 let thisTarget;
 body.addEventListener('click', function (event) {
@@ -221,8 +200,7 @@ body.addEventListener('click', function (event) {
 
 })
 
-
-
+new ClipboardJS('.copy-btn');
 
 
 

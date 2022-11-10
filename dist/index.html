@@ -154,7 +154,7 @@
                         </svg>
                     </div>
                     <div class="intro__info--footer" data-aos="fade-down" data-aos-delay="700">
-                        <a href="#" class="intro__info--btn btn">
+                        <a href="#our-ip-popup" class="intro__info--btn btn open-popup">
                             Начать играть
                         </a>
                     </div>
@@ -697,6 +697,35 @@
             </div>
         </div>
     </footer>
+
+    <div class="our-ip popup" id="our-ip-popup" style="display: none;">
+        <div class="our-ip__wrapper popup-wrapper">
+            <div class="our-ip__bg popup-bg popup-close"></div>
+            <div class="our-ip__body popup-body">
+                <button type="button" class="our-ip__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 1L8.5 8.5M1 16L8.5 8.5M8.5 8.5L1 1L16 16" stroke="white" stroke-opacity="0.54"/>
+                    </svg>
+                </button>
+                <div class="our-ip__overflow popup-overflow">
+                    <h2 class="our-ip__title section-title _decor-none">
+                        Наш ip адрес
+                    </h2>
+                    <form action="#" class="our-ip__form">
+                        <label class="our-ip__form--label">
+                            <input type="text" value="nat-110-130.dnepro.net" readonly id="our-ip-input" class="our-ip__form--input input">
+                        </label>
+                        <button class="our-ip__form--copy copy-btn" type="button" data-clipboard-target="#our-ip-input" title="Скопировать в буфер обмена">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.89523 13.8125C5.23559 13.8125 3.88477 12.4617 3.88477 10.802V3.54169H2.64523C1.57066 3.54169 0.697266 4.41496 0.697266 5.48952V15.052C0.697266 16.1266 1.57066 17 2.64523 17H11.4993C12.5739 17 13.4473 16.1266 13.4473 15.052V13.8125H6.89523Z" fill="#F05D35"/>
+                                <path d="M16.2806 1.94796C16.2806 0.871971 15.4086 0 14.3327 0H6.89523C5.81924 0 4.94727 0.871971 4.94727 1.94796V10.802C4.94727 11.878 5.81924 12.75 6.89523 12.75H14.3327C15.4086 12.75 16.2806 11.878 16.2806 10.802V1.94796Z" fill="#F05D35"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>

@@ -71,6 +71,13 @@
         border-radius: 21px;
     }
 
+    &._decor-none {
+        padding-bottom: 0;
+        &::before {
+            display: none;
+        }
+    }
+
 }
 
 .txt-center {

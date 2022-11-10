@@ -53,6 +53,7 @@ function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
         'node_modules/aos/dist/aos.js', // Анимация
+        'node_modules/clipboard/dist/clipboard.min.js', // Копирование в буфер обмена
         //'node_modules/shufflejs/dist/shuffle.min.js', // Tab Filter
         //'node_modules/sticky-js/dist/sticky.min.js' // Sticky
         //'node_modules/jquery/dist/jquery.js', // jQuery
