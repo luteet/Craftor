@@ -53,9 +53,13 @@
     }
     &-close-btn {
         position: absolute;
-        right: 23px; top: 23px;
+        right: 10px; top: 10px;
         width: 40px; height: 40px;
         z-index: 2;
+
+        @include _426 {
+            right: 23px; top: 23px;
+        }
 
         display: flex;
         align-items: center;
@@ -106,7 +110,10 @@
 
     &__form {
 
-        padding-top: 30px; padding-bottom: 15px;
+        padding-top: 30px; 
+        @include _426 {
+            padding-bottom: 15px;
+        }
 
         display: grid;
         & > * {

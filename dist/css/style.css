@@ -2,7 +2,7 @@ body,html {
     -webkit-text-size-adjust: 100%
 }
 
-.swiper-cube,.swiper-flip,button,hr,input {
+button,hr,input {
     overflow: visible
 }
 
@@ -10,7 +10,7 @@ progress,sub,sup {
     vertical-align: baseline
 }
 
-*,:after,:before,[type=checkbox],[type=radio],legend {
+*,.swiper-lazy-preloader,:after,:before,[type=checkbox],[type=radio],legend {
     box-sizing: border-box
 }
 
@@ -254,10 +254,6 @@ summary {
     box-sizing: content-box
 }
 
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
-}
-
 .swiper-android .swiper-slide,.swiper-wrapper {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0)
@@ -481,6 +477,14 @@ summary {
     content: "next"
 }
 
+.decor-circle::before,.main-decor::before,.swiper-cube .swiper-cube-shadow:before {
+    content: ""
+}
+
+.swiper-button-lock {
+    display: none
+}
+
 .swiper-pagination {
     position: absolute;
     text-align: center;
@@ -507,6 +511,10 @@ summary {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
+}
+
+.swiper-cube,.swiper-flip {
+    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -660,6 +668,10 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
+.swiper-pagination-lock {
+    display: none
+}
+
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
@@ -730,7 +742,6 @@ button.swiper-pagination-bullet {
     z-index: 10;
     -webkit-transform-origin: 50%;
     transform-origin: 50%;
-    box-sizing: border-box;
     border: 4px solid;
     border-radius: 50%;
     border-top-color: transparent
@@ -855,7 +866,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-cube .swiper-cube-shadow:before {
-    content: "";
     background: #000;
     position: absolute;
     left: 0;
@@ -879,11 +889,6 @@ button.swiper-pagination-bullet {
 
 .swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active {
     pointer-events: auto
-}
-
-.decor-circle::before,.main-decor {
-    pointer-events: none;
-    top: 0
 }
 
 .swiper-flip .swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-top {
@@ -1963,23 +1968,18 @@ a {
 }
 
 .decor-circle::before {
-    content: "";
     position: absolute;
     left: 50%;
+    top: 0;
     width: 1250px;
     height: 1250px;
     -webkit-transform: translate(-10%,-50%);
     transform: translate(-10%,-50%);
     border-radius: 50%;
+    pointer-events: none;
     z-index: -1;
     background: radial-gradient(circle,#d63f25 15%,rgba(0,0,0,0) 50%);
     opacity: .13
-}
-
-.main-decor,.main-decor::before {
-    left: 0;
-    position: absolute;
-    width: 100%
 }
 
 .btn {
@@ -2060,9 +2060,19 @@ section {
     box-shadow: 0 10px 13px rgba(240,93,53,.21)
 }
 
-.main-decor::before {
-    content: "";
+.main-decor {
+    position: absolute;
+    left: 0;
     top: 0;
+    width: 100%;
+    pointer-events: none
+}
+
+.main-decor::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 150%;
     background: linear-gradient(180deg,#000 0,rgba(0,0,0,0) 100%)
 }
@@ -2099,7 +2109,6 @@ section {
 .main-title,.section-title {
     font-family: var(--title-font);
     font-weight: 700;
-    font-size: 1.875rem;
     line-height: 115%
 }
 
@@ -2116,6 +2125,10 @@ section {
     color: var(--gray)
 }
 
+.main-title {
+    font-size: 1.875rem
+}
+
 .title {
     font-family: var(--title-font);
     font-weight: 700;
@@ -2123,6 +2136,7 @@ section {
 }
 
 .section-title {
+    font-size: 1.875rem;
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(180deg,#FFF 0,rgba(255,255,255,0) 211.46%);
@@ -2150,7 +2164,6 @@ section {
 }
 
 .popup,.popup-bg {
-    left: 0;
     top: 0;
     height: 100%;
     width: 100%
@@ -2213,6 +2226,7 @@ section {
 
 .popup {
     position: fixed;
+    left: 0;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -2229,6 +2243,7 @@ section {
 
 .popup-bg {
     position: absolute;
+    left: 0;
     background: #000;
     opacity: .7
 }
@@ -2255,8 +2270,8 @@ section {
 
 .popup-close-btn {
     position: absolute;
-    right: 23px;
-    top: 23px;
+    right: 10px;
+    top: 10px;
     width: 40px;
     height: 40px;
     z-index: 2;
@@ -2271,7 +2286,6 @@ section {
 }
 
 .our-ip__form {
-    padding-bottom: 15px;
     display: -ms-grid;
     display: grid
 }
@@ -3337,6 +3351,15 @@ section {
 @media (min-width:426px) {
     .popup-body {
         padding: 30px
+    }
+
+    .popup-close-btn {
+        right: 23px;
+        top: 23px
+    }
+
+    .our-ip__form {
+        padding-bottom: 15px
     }
 }
 
