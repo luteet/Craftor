@@ -239,31 +239,7 @@ window.onscroll = scroll; */
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let serversSlider = new Swiper('.servers__slider', {
-  
-    slidesPerView: 1,
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    breakpoints: {
-      992: {
-        slidesPerView: 4,
-        grid: {
-          rows: 2,
-        },
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-    }
-
-});
+let serversSlider;
 
 
 
